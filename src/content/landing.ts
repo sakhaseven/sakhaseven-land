@@ -1,0 +1,143 @@
+import {
+  BadgeCheck,
+  Leaf,
+  PackageCheck,
+  ScanLine,
+  ShieldCheck,
+  Sprout,
+  Wheat,
+  type LucideIcon,
+} from "lucide-react";
+
+export interface NavigationItem {
+  label: string;
+  href: string;
+}
+
+export interface Product {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  icon: LucideIcon;
+  tone: string;
+  iconSurface: string;
+  badge: string;
+}
+
+export interface TrustPoint {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+export interface FooterGroup {
+  title: string;
+  links: NavigationItem[];
+}
+
+export const contactHref = "tel:+201000000000";
+export const websiteHref = "https://www.sakha7.com";
+
+export const navigationItems: NavigationItem[] = [
+  { label: "منتجاتنا", href: "#products" },
+  { label: "الجودة", href: "#quality" },
+  { label: "عن سخا 7", href: "#about" },
+  { label: "تواصل معنا", href: "#contact" },
+];
+
+export const heroProofs = [
+  "بيانات واضحة",
+  "عبوات قابلة للتتبع",
+  "دعم عربي متخصص",
+];
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "تقاوي القمح",
+    category: "محاصيل حقلية",
+    description:
+      "تقاوي مختارة بعناية، مناسبة للموسم الزراعي ومجهزة وفق معايير جودة واضحة.",
+    icon: Wheat,
+    tone: "from-[#f2e7c8] via-[#e7d39b] to-[#caa94f]",
+    iconSurface: "bg-[#fffaf0] text-[#7f6322]",
+    badge: "اختيار المزارعين",
+  },
+  {
+    id: 2,
+    name: "تقاوي الأرز",
+    category: "محاصيل حقلية",
+    description:
+      "تقاوي موثوقة تساعدك تبدأ موسمك بخطوة صحيحة، مع بيانات واضحة لكل عبوة.",
+    icon: Sprout,
+    tone: "from-[#dcebdc] via-[#b9d8bd] to-[#5e956a]",
+    iconSurface: "bg-[#f4fbf4] text-[#2d6740]",
+    badge: "جودة موثوقة",
+  },
+  {
+    id: 3,
+    name: "تقاوي الذرة",
+    category: "محاصيل حقلية",
+    description:
+      "تقاوي منتقاة للاستخدام الزراعي، بتعبئة عملية تساعد في الحفاظ على المنتج.",
+    icon: Leaf,
+    tone: "from-[#fff0c4] via-[#f0cf75] to-[#d38a24]",
+    iconSurface: "bg-[#fffaf0] text-[#9b651e]",
+    badge: "تعبئة آمنة",
+  },
+  {
+    id: 4,
+    name: "تقاوي الفول",
+    category: "بقوليات",
+    description:
+      "منتج مجهز بعناية مع إمكانية التحقق من بيانات العبوة ومصدرها بسهولة.",
+    icon: PackageCheck,
+    tone: "from-[#e8e3d7] via-[#ccc3ae] to-[#81775e]",
+    iconSurface: "bg-[#fbfaf6] text-[#5d5542]",
+    badge: "قابل للتتبع",
+  },
+];
+
+export const trustPoints: TrustPoint[] = [
+  {
+    icon: ShieldCheck,
+    title: "جودة واضحة",
+    description: "بنوضح لك بيانات المنتج ومواصفاته من غير تعقيد.",
+  },
+  {
+    icon: ScanLine,
+    title: "تحقق بالـ QR",
+    description: "امسح الكود الموجود على العبوة واعرف تفاصيل المنتج.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "مصدر موثوق",
+    description: "كل عبوة لها بيانات تعريف تساعدك تتأكد من مصدرها.",
+  },
+];
+
+export const footerGroups: FooterGroup[] = [
+  {
+    title: "استكشف",
+    links: navigationItems,
+  },
+  {
+    title: "المنتجات",
+    links: [
+      { label: "تقاوي القمح", href: "#products" },
+      { label: "تقاوي الأرز", href: "#products" },
+      { label: "تقاوي الذرة", href: "#products" },
+      { label: "تقاوي البقوليات", href: "#products" },
+    ],
+  },
+  {
+    title: "الثقة والجودة",
+    links: [
+      { label: "بيانات المنتج", href: "#quality" },
+      { label: "التحقق بالـ QR", href: "#quality" },
+      { label: "تتبع العبوة", href: "#quality" },
+      { label: "دعم اختيار المنتج", href: "#contact" },
+    ],
+  },
+];
