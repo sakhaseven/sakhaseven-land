@@ -66,7 +66,12 @@ export default defineConfig(({ mode }) => {
           globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,woff2}"],
           globIgnores: ["**/env-config.js"],
           navigateFallback: "/index.html",
-          navigateFallbackDenylist: [/^\/api\//, /\/env-config\.js$/, /^\/assets\//],
+          navigateFallbackDenylist: [
+            /^\/api\//,
+            /\/env-config\.js$/,
+            /^\/assets\//,
+            /^\/privacy-policy\/?$/,
+          ],
         },
         manifest: {
           id: "/",
@@ -124,6 +129,14 @@ export default defineConfig(({ mode }) => {
           rootDir,
           "src/shims/useTransactionFormTradeLines.ts",
         ),
+      },
+    },
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(rootDir, "index.html"),
+          privacyPolicy: path.resolve(rootDir, "privacy-policy/index.html"),
+        },
       },
     },
     server: {

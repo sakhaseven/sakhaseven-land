@@ -151,7 +151,15 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3 pt-7 text-xs text-white/42 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} سخا 7. جميع الحقوق محفوظة.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p>© {new Date().getFullYear()} سخا 7. جميع الحقوق محفوظة.</p>
+            <a
+              href="/privacy-policy"
+              className="rounded-sm text-white/60 transition hover:text-[#e1c46f]"
+            >
+              سياسة الخصوصية
+            </a>
+          </div>
           <p>جودة أوضح · اختيار أذكى · موسم أفضل</p>
         </div>
       </Container>

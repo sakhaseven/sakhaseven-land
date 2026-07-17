@@ -26,7 +26,7 @@ export default function App() {
         <HeroSection />
         <ProductsSection />
         <QualitySection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <AboutSection />
         <ContactSection />
       </main>

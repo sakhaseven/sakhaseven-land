@@ -92,3 +92,44 @@ describe("static search and browser metadata", () => {
     });
   });
 });
+
+describe("privacy policy page", () => {
+  const html = readProjectFile("privacy-policy/index.html");
+  const document = new DOMParser().parseFromString(html, "text/html");
+
+  it("is a standalone, indexable Arabic document", () => {
+    expect(document.documentElement.lang).toBe("ar-EG");
+    expect(document.documentElement.dir).toBe("rtl");
+    expect(document.title).toBe("سياسة الخصوصية | سخا 7");
+    expect(
+      document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href,
+    ).toBe("https://www.sakha7.com/privacy-policy");
+    expect(
+      document.querySelector<HTMLMetaElement>('meta[name="robots"]')?.content,
+    ).toContain("index");
+  });
+
+  it("publishes the policy and official contact methods in initial HTML", () => {
+    const text = document.body.textContent ?? "";
+
+    expect(text).toContain("المعلومات التي قد نتعامل معها");
+    expect(text).toContain("الكوكيز والتخزين المحلي");
+    expect(text).toContain("اختياراتك وحقوقك");
+    expect(text).toContain("info@sakha7.com");
+    expect(text).toContain("0100 560 3378");
+    expect(text).toContain("0100 551 6354");
+  });
+
+  it("is discoverable from the sitemap", () => {
+    expect(readProjectFile("public/sitemap.xml")).toContain(
+      "https://www.sakha7.com/privacy-policy",
+    );
+  });
+
+  it("bypasses the landing-page fallback in production", () => {
+    const nginx = readProjectFile("nginx.conf");
+
+    expect(nginx).toContain("location ~ ^/privacy-policy/?$");
+    expect(nginx).toContain("try_files /privacy-policy/index.html =404;");
+  });
+});
