@@ -1,5 +1,5 @@
 import { ArrowLeft } from "lucide-react";
-import { contactHref, trustPoints, type TrustPoint } from "../../content/landing";
+import { trustPoints, type TrustPoint } from "../../content/landing";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -30,7 +30,7 @@ export function QualitySection() {
             />
 
             <a
-              href={contactHref}
+              href="#contact"
               className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#214e34]/15 bg-white px-6 py-3 text-sm font-bold text-[#214e34] transition hover:-translate-y-0.5 hover:border-[#214e34]/30"
             >
               اسألنا عن المنتج المناسب

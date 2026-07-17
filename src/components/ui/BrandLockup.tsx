@@ -16,19 +16,12 @@ export function BrandLockup({
 }: BrandLockupProps) {
   return (
     <span className={clsx("inline-flex items-center gap-3", className)}>
-      <span
-        className={clsx(
-          "inline-flex shrink-0 items-center justify-center text-white shadow-[0_10px_30px_rgba(21,50,32,0.16)]",
-          compact ? "size-10 rounded-xl" : "size-11 rounded-2xl",
-          inverted ? "bg-white/10 text-[#e8ce7a] shadow-none" : "bg-[#214e34]",
-        )}
-      >
-        <Sakha7Logo
-          size={compact ? 21 : 24}
-          title=""
-          variant={inverted ? "golden" : "default"}
-        />
-      </span>
+      <Sakha7Logo
+        size={compact ? 21 : 40}
+        title=""
+        variant="golden"
+        className="shrink-0"
+      />
 
       <span className="min-w-0">
         <span className="flex items-baseline gap-1 leading-none">

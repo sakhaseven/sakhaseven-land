@@ -1,6 +1,5 @@
 import { ArrowLeft, Phone } from "lucide-react";
 import { Sakha7Logo } from "../ui/Sakha7Logo";
-import { contactHref } from "../../content/landing";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -27,7 +26,7 @@ export function AboutSection() {
 
             <div className="shrink-0">
               <a
-                href={contactHref}
+                href="#contact"
                 className="group flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#e1c46f] px-8 py-4 text-sm font-bold text-[#203426] transition hover:-translate-y-0.5 hover:bg-[#ecd58e]"
               >
                 <Phone className="size-5" aria-hidden="true" />

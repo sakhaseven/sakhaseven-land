@@ -2,14 +2,23 @@ import {
   ArrowLeft,
   BadgeCheck,
   ExternalLink,
+  Facebook,
+  Mail,
+  MessageCircle,
   Phone,
   ScanLine,
   ShieldCheck,
+  Youtube,
 } from "lucide-react";
 import {
-  contactHref,
+  contactPhones,
+  emailAddress,
+  emailHref,
+  facebookHref,
   footerGroups,
+  whatsappHref,
   websiteHref,
+  youtubeHref,
 } from "../../content/landing";
 import { BrandLockup } from "../ui/BrandLockup";
 import { Container } from "../ui/Container";
@@ -22,7 +31,7 @@ const footerTrustItems = [
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="scroll-mt-24 bg-[#14291d] text-white">
+    <footer className="bg-[#14291d] text-white">
       <Container className="py-12 sm:py-16">
         <div className="flex flex-col gap-6 rounded-[28px] border border-white/10 bg-white/[0.055] p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
@@ -31,11 +40,13 @@ export function SiteFooter() {
             <p className="mt-3 leading-7 text-white/60">فريقنا يساعدك في معرفة الأصناف المتاحة واختيار الحل المناسب لاحتياجك.</p>
           </div>
           <a
-            href={contactHref}
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
             className="group inline-flex min-h-13 shrink-0 items-center justify-center gap-3 rounded-full bg-[#e1c46f] px-7 py-3.5 text-sm font-bold text-[#203426] transition hover:-translate-y-0.5 hover:bg-[#ecd58e]"
           >
-            <Phone className="size-4" aria-hidden="true" />
-            تحدث مع فريقنا
+            <MessageCircle className="size-4" aria-hidden="true" />
+            تواصل عبر واتساب
             <ArrowLeft className="size-4 transition group-hover:-translate-x-1" aria-hidden="true" />
           </a>
         </div>
@@ -58,6 +69,56 @@ export function SiteFooter() {
               www.sakha7.com
               <ExternalLink className="size-3.5" aria-hidden="true" />
             </a>
+
+            <div className="mt-5 space-y-2.5 border-t border-white/10 pt-5">
+              {contactPhones.map((phone) => (
+                <a
+                  key={phone.href}
+                  href={phone.href}
+                  className="flex items-center gap-2 text-sm font-semibold text-white/65 transition hover:text-[#e1c46f]"
+                >
+                  <Phone className="size-3.5" aria-hidden="true" />
+                  <span dir="ltr">{phone.local}</span>
+                </a>
+              ))}
+              <a
+                href={emailHref}
+                className="flex items-center gap-2 text-sm font-semibold text-white/65 transition hover:text-[#e1c46f]"
+              >
+                <Mail className="size-3.5" aria-hidden="true" />
+                <span dir="ltr">{emailAddress}</span>
+              </a>
+            </div>
+
+            <div className="mt-5 flex items-center gap-2">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="flex size-10 items-center justify-center rounded-full bg-white/[0.07] text-white/70 transition hover:bg-[#e1c46f] hover:text-[#203426]"
+                aria-label="تواصل مع سخا 7 عبر واتساب"
+              >
+                <MessageCircle className="size-4" aria-hidden="true" />
+              </a>
+              <a
+                href={facebookHref}
+                target="_blank"
+                rel="noreferrer"
+                className="flex size-10 items-center justify-center rounded-full bg-white/[0.07] text-white/70 transition hover:bg-[#e1c46f] hover:text-[#203426]"
+                aria-label="صفحة سخا 7 على فيسبوك"
+              >
+                <Facebook className="size-4" aria-hidden="true" />
+              </a>
+              <a
+                href={youtubeHref}
+                target="_blank"
+                rel="noreferrer"
+                className="flex size-10 items-center justify-center rounded-full bg-white/[0.07] text-white/70 transition hover:bg-[#e1c46f] hover:text-[#203426]"
+                aria-label="قناة سخا 7 على يوتيوب"
+              >
+                <Youtube className="size-4" aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           <nav className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3" aria-label="روابط التذييل">

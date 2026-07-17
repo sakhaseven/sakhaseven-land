@@ -1,5 +1,6 @@
 import {
   AboutSection,
+  ContactSection,
   HeroSection,
   ProductsSection,
   QualitySection,
@@ -21,6 +22,7 @@ export default function App() {
         <QualitySection />
         <TestimonialsSection />
         <AboutSection />
+        <ContactSection />
       </main>
       <SiteFooter />
     </div>

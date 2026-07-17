@@ -6,7 +6,7 @@ import {
   ScanLine,
 } from "lucide-react";
 import { Sakha7Logo } from "../ui/Sakha7Logo";
-import { contactHref, heroProofs } from "../../content/landing";
+import { heroProofs } from "../../content/landing";
 import { Container } from "../ui/Container";
 
 const traceSteps = ["المصدر", "الفحص", "التعبئة"];
@@ -55,7 +55,7 @@ export function HeroSection() {
             </a>
 
             <a
-              href={contactHref}
+              href="#contact"
               className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full border border-[#263a2b]/10 bg-white/80 px-7 py-3.5 text-sm font-semibold text-[#294532] shadow-sm backdrop-blur transition hover:border-[#214e34]/20 hover:bg-white"
             >
               تحدث مع فريقنا

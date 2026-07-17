@@ -56,7 +56,38 @@ export interface Testimonial {
   isPlaceholder?: boolean;
 }
 
-export const contactHref = "tel:+201000000000";
+export interface ContactPhone {
+  label: string;
+  international: string;
+  local: string;
+  segments: [string, string, string];
+  href: string;
+}
+
+export const contactPhones: ContactPhone[] = [
+  {
+    label: "الخط الرئيسي",
+    international: "+20 100 560 3378",
+    local: "0100 560 3378",
+    segments: ["0100", "560", "3378"],
+    href: "tel:+201005603378",
+  },
+  {
+    label: "خط التواصل",
+    international: "+20 100 551 6354",
+    local: "0100 551 6354",
+    segments: ["0100", "551", "6354"],
+    href: "tel:+201005516354",
+  },
+];
+
+export const contactHref = contactPhones[0].href;
+export const whatsappHref = "https://wa.me/201005603378";
+export const emailAddress = "info@sakha7.com";
+export const emailHref = `mailto:${emailAddress}`;
+export const facebookHref =
+  "https://www.facebook.com/profile.php?id=61591813868362";
+export const youtubeHref = "https://www.youtube.com/@Sakha7";
 export const websiteHref = "https://www.sakha7.com";
 
 export const navigationItems: NavigationItem[] = [

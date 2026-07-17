@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
-import { contactHref, navigationItems } from "../../content/landing";
+import { navigationItems } from "../../content/landing";
 import { BrandLockup } from "../ui/BrandLockup";
 import { Container } from "../ui/Container";
 
@@ -38,7 +38,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <a
-            href={contactHref}
+            href="#contact"
             className="hidden items-center gap-2 rounded-full bg-[#214e34] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#183c28] sm:flex"
           >
             <Phone className="size-4" aria-hidden="true" />
@@ -81,7 +81,7 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href={contactHref}
+              href="#contact"
               className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-[#214e34] px-4 py-3 text-sm font-bold text-white"
               onClick={closeMenu}
             >
