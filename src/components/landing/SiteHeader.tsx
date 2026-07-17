@@ -22,7 +22,7 @@ export function SiteHeader() {
         </a>
 
         <nav
-          className="hidden items-center gap-8 text-sm font-medium text-[#4e594f] md:flex"
+          className="hidden items-center gap-7 text-sm font-medium text-[#4e594f] lg:flex"
           aria-label="التنقل الرئيسي"
         >
           {navigationItems.map((item) => (
@@ -47,7 +47,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            className="flex size-11 items-center justify-center rounded-full border border-black/10 bg-white text-[#233328] transition hover:border-[#214e34]/25 hover:text-[#214e34] md:hidden"
+            className="flex size-11 items-center justify-center rounded-full border border-black/10 bg-white text-[#233328] transition hover:border-[#214e34]/25 hover:text-[#214e34] lg:hidden"
             aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
@@ -64,7 +64,7 @@ export function SiteHeader() {
 
       <div
         id="mobile-navigation"
-        className={`border-t border-black/[0.05] bg-[#f8f7f2] md:hidden ${
+        className={`border-t border-black/[0.05] bg-[#f8f7f2] lg:hidden ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >

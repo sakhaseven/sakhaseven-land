@@ -1,5 +1,5 @@
 import { ArrowLeft, Phone } from "lucide-react";
-import { Sakha7Logo } from "../../compoenents/Sakha7Logo";
+import { Sakha7Logo } from "../ui/Sakha7Logo";
 import { contactHref } from "../../content/landing";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -15,7 +15,7 @@ export function AboutSection() {
           <div className="relative z-10 flex flex-col justify-between gap-10 lg:flex-row lg:items-center">
             <div className="max-w-2xl">
               <div className="mb-5 flex size-12 items-center justify-center rounded-2xl bg-white/10 text-[#e0c46f]">
-                <Sakha7Logo size={25} title="" />
+                <Sakha7Logo size={25} title="" variant="golden" />
               </div>
               <SectionHeading
                 eyebrow="شركة مصرية برؤية طويلة المدى"

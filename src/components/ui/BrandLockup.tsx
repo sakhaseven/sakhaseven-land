@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { Sakha7Logo } from "../../compoenents/Sakha7Logo";
+import { Sakha7Logo } from "./Sakha7Logo";
 
 interface BrandLockupProps {
   className?: string;
@@ -23,7 +23,11 @@ export function BrandLockup({
           inverted ? "bg-white/10 text-[#e8ce7a] shadow-none" : "bg-[#214e34]",
         )}
       >
-        <Sakha7Logo size={compact ? 21 : 24} title="" />
+        <Sakha7Logo
+          size={compact ? 21 : 24}
+          title=""
+          variant={inverted ? "golden" : "default"}
+        />
       </span>
 
       <span className="min-w-0">

@@ -1,18 +1,32 @@
-import type { SVGProps } from "react";
+import goldenLogoUrl from "../../../design-system/Logo.Golden.svg?url";
 
-interface Sakha7LogoProps
-  extends Omit<SVGProps<SVGSVGElement>, "height" | "width"> {
+interface Sakha7LogoProps {
   size?: number | string;
+  className?: string;
   title?: string;
+  variant?: "default" | "golden";
 }
 
 export function Sakha7Logo({
   size = 24,
   className = "",
   title = "شعار سخا 7",
-  ...props
+  variant = "default",
 }: Sakha7LogoProps) {
   const isDecorative = title.length === 0;
+
+  if (variant === "golden") {
+    return (
+      <img
+        src={goldenLogoUrl}
+        width={size}
+        height={size}
+        alt={isDecorative ? "" : title}
+        aria-hidden={isDecorative || undefined}
+        className={className}
+      />
+    );
+  }
 
   return (
     <svg
@@ -25,7 +39,6 @@ export function Sakha7Logo({
       aria-hidden={isDecorative || undefined}
       aria-label={isDecorative ? undefined : title}
       className={className}
-      {...props}
     >
       <g
         stroke="currentColor"

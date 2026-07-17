@@ -5,6 +5,7 @@ import {
   QualitySection,
   SiteFooter,
   SiteHeader,
+  TestimonialsSection,
 } from "./components/landing";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <HeroSection />
         <ProductsSection />
         <QualitySection />
+        <TestimonialsSection />
         <AboutSection />
       </main>
       <SiteFooter />

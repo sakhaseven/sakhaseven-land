@@ -5,7 +5,7 @@ import {
   PackageCheck,
   ScanLine,
 } from "lucide-react";
-import { Sakha7Logo } from "../../compoenents/Sakha7Logo";
+import { Sakha7Logo } from "../ui/Sakha7Logo";
 import { contactHref, heroProofs } from "../../content/landing";
 import { Container } from "../ui/Container";
 
@@ -83,7 +83,7 @@ export function HeroSection() {
                   <p className="mt-1 text-2xl font-bold">من أرضنا لأرضك</p>
                 </div>
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-[#e5ca78] backdrop-blur">
-                  <Sakha7Logo size={25} title="" />
+                  <Sakha7Logo size={25} title="" variant="golden" />
                 </div>
               </div>
 
