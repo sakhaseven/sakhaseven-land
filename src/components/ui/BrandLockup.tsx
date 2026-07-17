@@ -51,7 +51,7 @@ export function BrandLockup({
               inverted ? "text-white/55" : "text-[#667066]",
             )}
           >
-            للتقاوي والمنتجات الزراعية
+            لتقاوي القمح والأرز
           </span>
         ) : null}
       </span>

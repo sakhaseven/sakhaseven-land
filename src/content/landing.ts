@@ -1,7 +1,5 @@
 import {
   BadgeCheck,
-  Leaf,
-  PackageCheck,
   ScanLine,
   ShieldCheck,
   Sprout,
@@ -189,88 +187,6 @@ export const products: Product[] = [
       },
     ],
   },
-  {
-    id: 3,
-    name: "تقاوي الذرة",
-    category: "محاصيل حقلية",
-    description:
-      "تقاوي منتقاة للاستخدام الزراعي، بتعبئة عملية تساعد في الحفاظ على المنتج.",
-    icon: Leaf,
-    tone: "from-[#fff0c4] via-[#f0cf75] to-[#d38a24]",
-    iconSurface: "bg-[#fffaf0] text-[#9b651e]",
-    badge: "تعبئة آمنة",
-    gallery: [
-      {
-        id: "corn-planting",
-        stage: "01 · الزراعة",
-        title: "بداية الصنف",
-        description: "اختيار الحقل وتجهيز التربة لزراعة منتظمة.",
-        alt: "زراعة تقاوي الذرة في الحقل",
-      },
-      {
-        id: "corn-care",
-        stage: "02 · الرعاية",
-        title: "متابعة مرحلة النمو",
-        description: "العناية بالنبات ومتابعة تطور المحصول على مدار الموسم.",
-        alt: "متابعة نمو نبات الذرة",
-      },
-      {
-        id: "corn-selection",
-        stage: "03 · الانتقاء",
-        title: "انتقاء المحصول",
-        description: "مراجعة المحصول واختيار المناسب للتجهيز كتقاوي.",
-        alt: "انتقاء محصول الذرة",
-      },
-      {
-        id: "corn-seeds",
-        stage: "04 · التقاوي",
-        title: "تجهيز يحافظ على الجودة",
-        description: "تجهيز وتعبئة المنتج بعناية للحفاظ عليه حتى الاستخدام.",
-        alt: "تجهيز وتعبئة تقاوي الذرة",
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "تقاوي الفول",
-    category: "بقوليات",
-    description:
-      "منتج مجهز بعناية مع إمكانية التحقق من بيانات العبوة ومصدرها بسهولة.",
-    icon: PackageCheck,
-    tone: "from-[#e8e3d7] via-[#ccc3ae] to-[#81775e]",
-    iconSurface: "bg-[#fbfaf6] text-[#5d5542]",
-    badge: "قابل للتتبع",
-    gallery: [
-      {
-        id: "beans-planting",
-        stage: "01 · الزراعة",
-        title: "تجهيز الأرض والزراعة",
-        description: "اختيار التوقيت وتجهيز الأرض لبداية مناسبة للصنف.",
-        alt: "زراعة الفول في الأرض",
-      },
-      {
-        id: "beans-care",
-        stage: "02 · الرعاية",
-        title: "متابعة المحصول",
-        description: "رعاية النبات ومتابعته طوال فترة النمو.",
-        alt: "متابعة نمو محصول الفول",
-      },
-      {
-        id: "beans-selection",
-        stage: "03 · الانتقاء",
-        title: "اختيار المنتج المناسب",
-        description: "فحص المحصول وانتقاء المناسب قبل التجهيز النهائي.",
-        alt: "فحص وانتقاء محصول الفول",
-      },
-      {
-        id: "beans-seeds",
-        stage: "04 · التقاوي",
-        title: "تعبئة قابلة للتتبع",
-        description: "تجهيز التقاوي وتسجيل بيانات العبوة ومصدرها.",
-        alt: "تجهيز وتعبئة تقاوي الفول",
-      },
-    ],
-  },
 ];
 
 // استبدل النماذج التالية بآراء حقيقية وموثقة قبل النشر النهائي.
@@ -332,8 +248,8 @@ export const footerGroups: FooterGroup[] = [
     links: [
       { label: "تقاوي القمح", href: "#products" },
       { label: "تقاوي الأرز", href: "#products" },
-      { label: "تقاوي الذرة", href: "#products" },
-      { label: "تقاوي البقوليات", href: "#products" },
+      { label: "رحلة العناية بالقمح", href: "#products" },
+      { label: "رحلة العناية بالأرز", href: "#products" },
     ],
   },
   {

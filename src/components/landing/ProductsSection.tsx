@@ -15,9 +15,9 @@ function ProductCard({ product, onOpenGallery }: ProductCardProps) {
   const Icon = product.icon;
 
   return (
-    <article className="group relative overflow-hidden rounded-[28px] border border-black/[0.06] bg-[#fbfbf8] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#315d3e]/15 hover:shadow-[0_24px_55px_rgba(38,64,44,0.1)]">
+    <article className="group relative grid overflow-hidden rounded-[30px] border border-black/[0.06] bg-[#fbfbf8] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#315d3e]/15 hover:shadow-[0_24px_55px_rgba(38,64,44,0.1)] sm:p-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-7">
       <div
-        className={`relative flex h-52 items-center justify-center overflow-hidden rounded-[22px] bg-gradient-to-br ${product.tone}`}
+        className={`relative flex min-h-64 items-center justify-center overflow-hidden rounded-[24px] bg-gradient-to-br ${product.tone}`}
       >
         <span className="absolute right-3 top-3 rounded-full bg-white/85 px-3 py-1.5 text-[10px] font-bold text-[#37463a] shadow-sm backdrop-blur">
           {product.badge}
@@ -27,20 +27,20 @@ function ProductCard({ product, onOpenGallery }: ProductCardProps) {
         </span>
 
         <div
-          className={`flex size-24 items-center justify-center rounded-[28px] border border-white/70 shadow-[0_22px_45px_rgba(41,51,38,0.16)] transition duration-500 group-hover:scale-105 ${product.iconSurface}`}
+          className={`flex size-28 items-center justify-center rounded-[32px] border border-white/70 shadow-[0_22px_45px_rgba(41,51,38,0.16)] transition duration-500 group-hover:scale-105 ${product.iconSurface}`}
         >
-          <Icon className="size-11" strokeWidth={1.6} aria-hidden="true" />
+          <Icon className="size-13" strokeWidth={1.6} aria-hidden="true" />
         </div>
       </div>
 
-      <div className="pt-5">
+      <div className="flex flex-col justify-center pt-6 lg:pt-0">
         <p className="text-[11px] font-semibold text-[#859087]">
           {product.category}
         </p>
-        <h3 className="mt-1.5 text-xl font-bold text-[#213326]">
+        <h3 className="mt-1.5 text-2xl font-bold text-[#213326]">
           {product.name}
         </h3>
-        <p className="mt-3 min-h-[72px] text-sm leading-6 text-[#6c756e]">
+        <p className="mt-3 text-sm leading-7 text-[#6c756e]">
           {product.description}
         </p>
 
@@ -78,9 +78,9 @@ export function ProductsSection() {
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
-            eyebrow="منتجات سخا 7"
-            title="نرعى الصنف من الأرض حتى يصبح تقاوي"
-            description="افتح معرض كل صنف وشاهد مراحل العناية به من بداية الزراعة، مرورًا بالمتابعة والانتقاء، حتى التجهيز والتعبئة."
+            eyebrow="تخصصنا الحالي"
+            title="القمح والأرز… عناية مركزة من الأرض حتى التقاوي"
+            description="نركز خبرتنا حاليًا على تقاوي القمح والأرز فقط، ونتابع كل صنف من بداية الزراعة، مرورًا بالرعاية والانتقاء، حتى التجهيز والتعبئة."
           />
 
           <a
@@ -95,7 +95,7 @@ export function ProductsSection() {
           </a>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 xl:grid-cols-2">
           {products.map((product) => (
             <ProductCard
               key={product.id}

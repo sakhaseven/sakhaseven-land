@@ -37,7 +37,7 @@ export function SiteFooter() {
           <div className="max-w-2xl">
             <p className="text-xs font-bold text-[#e1c46f]">شريكك في الموسم القادم</p>
             <h2 className="mt-2 text-2xl font-bold leading-tight sm:text-3xl">تحتاج تعرف المنتج الأنسب لأرضك؟</h2>
-            <p className="mt-3 leading-7 text-white/60">فريقنا يساعدك في معرفة الأصناف المتاحة واختيار الحل المناسب لاحتياجك.</p>
+            <p className="mt-3 leading-7 text-white/60">فريقنا يساعدك في معرفة أصناف القمح والأرز المتاحة واختيار الأنسب لاحتياجك.</p>
           </div>
           <a
             href={whatsappHref}
@@ -57,8 +57,8 @@ export function SiteFooter() {
               <BrandLockup inverted />
             </a>
             <p className="mt-6 text-sm leading-7 text-white/58">
-              شركة مصرية متخصصة في التقاوي والمنتجات الزراعية، نعمل على تقديم
-              جودة واضحة وخدمة موثوقة للمزارع.
+              شركة مصرية متخصصة حاليًا في تقاوي القمح والأرز، بعناية مستمرة
+              وجودة واضحة وخدمة موثوقة للمزارع.
             </p>
             <a
               href={websiteHref}

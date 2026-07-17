@@ -1,8 +1,19 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, describe, expect, it } from "vitest";
 import { ProductsSection } from "./ProductsSection";
 
+afterEach(cleanup);
+
 describe("ProductsSection", () => {
+  it("shows only the currently available wheat and rice seed lines", () => {
+    render(<ProductsSection />);
+
+    expect(screen.getByRole("heading", { name: "تقاوي القمح" })).toBeTruthy();
+    expect(screen.getByRole("heading", { name: "تقاوي الأرز" })).toBeTruthy();
+    expect(screen.queryByText("تقاوي الذرة")).toBeNull();
+    expect(screen.queryByText("تقاوي الفول")).toBeNull();
+  });
+
   it("opens, navigates, and closes a product gallery", () => {
     render(<ProductsSection />);
 

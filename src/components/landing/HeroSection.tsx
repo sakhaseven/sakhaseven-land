@@ -11,6 +11,81 @@ import { Container } from "../ui/Container";
 
 const traceSteps = ["المصدر", "الفحص", "التعبئة"];
 
+function HandDrawnUnderline() {
+  return (
+    <svg
+      className="pointer-events-none absolute -bottom-1.5 -left-[3%] h-4 w-[106%] overflow-visible -rotate-[0.5deg] text-[#c9a227]"
+      viewBox="0 0 260 18"
+      preserveAspectRatio="none"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M5 10.8C25 8.5 43 11.9 64 10.2C88 8.1 105 11.4 128 9.6C151 7.8 169 10.8 191 8.9C213 7.1 234 9.8 255 7.3"
+        stroke="currentColor"
+        strokeWidth="4.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 13.1C30 11.7 47 14.1 69 12.2C91 10.3 110 13.3 133 11.4C157 9.4 176 12.1 198 10.1C220 8.3 238 10.5 253 9"
+        stroke="#e4c96a"
+        strokeWidth="1.35"
+        strokeLinecap="round"
+        opacity="0.75"
+      />
+      <path
+        d="M18 8.8C39 7.6 50 10 72 8.6M145 8.2C164 6.9 179 8.6 194 7.4M219 7.2C230 6.5 239 7.3 247 6.6"
+        stroke="#9f7b1e"
+        strokeWidth="0.9"
+        strokeLinecap="round"
+        opacity="0.42"
+      />
+    </svg>
+  );
+}
+
+function VerificationProgress() {
+  return (
+    <div className="relative overflow-hidden rounded-[20px] border border-[#c9a227]/15 bg-gradient-to-b from-[#f7f5eb] to-[#edf3e9] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] sm:px-5">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-l from-transparent via-[#c9a227]/45 to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="relative">
+        <span
+          className="absolute left-[16.666%] right-[16.666%] top-[17px] h-[2px] -translate-y-1/2 bg-gradient-to-l from-[#2d6740] via-[#c9a227] to-[#2d6740]"
+          aria-hidden="true"
+        />
+
+        <ol
+          className="relative grid grid-cols-3"
+          aria-label="مراحل التحقق المكتملة"
+        >
+          {traceSteps.map((step) => (
+            <li
+              key={step}
+              className="relative z-10 flex min-w-0 flex-col items-center text-center"
+            >
+              <span className="flex size-9 items-center justify-center rounded-full border-[3px] border-[#f4f3e9] bg-[#2d6740] text-white shadow-[0_4px_12px_rgba(45,103,64,0.22),0_0_0_1px_rgba(201,162,39,0.28)]">
+                <Check
+                  className="size-4"
+                  strokeWidth={2.7}
+                  aria-hidden="true"
+                />
+              </span>
+              <span className="mt-2 text-[10px] font-bold leading-none text-[#435348]">
+                {step}
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  );
+}
+
 export function HeroSection() {
   return (
     <section id="top" className="relative scroll-mt-24" aria-labelledby="hero-title">
@@ -34,15 +109,16 @@ export function HeroSection() {
             className="text-balance text-4xl font-bold leading-[1.35] tracking-[-0.035em] text-[#17241a] sm:text-5xl lg:text-[64px]"
           >
             تقاوي مختارة
-            <span className="mx-3 inline-block border-b-4 border-[#c6a34f]/75 text-[#2d6740]">
+            <span className="relative mx-3 inline-block pb-1 text-[#2d6740]">
               لموسم أفضل
+              <HandDrawnUnderline />
             </span>
             من أول خطوة.
           </h1>
 
           <p className="mt-7 max-w-xl text-base leading-8 text-[#5d695f] sm:text-lg">
-            في سخا 7، بنوفر لك منتجات زراعية موثوقة، بتعبئة محترمة ومعلومات
-            واضحة تساعدك تختار وأنت مطمّن.
+            في سخا 7، بنتخصص حاليًا في تقاوي القمح والأرز، بعناية مستمرة من
+            الحقل حتى التعبئة ومعلومات واضحة تساعدك تختار وأنت مطمّن.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -122,23 +198,7 @@ export function HeroSection() {
                   </div>
                 </dl>
 
-                <div className="rounded-2xl bg-[#eef3e9] p-4">
-                  <div className="flex items-center justify-between">
-                    {traceSteps.map((step, index) => (
-                      <div key={step} className="flex flex-1 items-center last:flex-none">
-                        <div className="flex flex-col items-center gap-1.5">
-                          <span className="flex size-7 items-center justify-center rounded-full bg-[#2d6740] text-white">
-                            <Check className="size-3.5" strokeWidth={2.5} aria-hidden="true" />
-                          </span>
-                          <span className="text-[9px] font-bold text-[#5c665e]">{step}</span>
-                        </div>
-                        {index < traceSteps.length - 1 ? (
-                          <span className="mx-2 h-px flex-1 bg-[#a9bda9]" aria-hidden="true" />
-                        ) : null}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <VerificationProgress />
               </div>
 
               <div className="relative z-10 mt-4 grid grid-cols-2 gap-3">
