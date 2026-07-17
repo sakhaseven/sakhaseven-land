@@ -43,7 +43,7 @@ export function SiteFooter() {
             href={whatsappHref}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex min-h-13 shrink-0 items-center justify-center gap-3 rounded-full bg-[#e1c46f] px-7 py-3.5 text-sm font-bold text-[#203426] transition hover:-translate-y-0.5 hover:bg-[#ecd58e]"
+            className="group inline-flex min-h-13 shrink-0 items-center justify-center gap-3 rounded-full bg-[#e1c46f] px-5 py-3.5 text-center text-sm font-bold text-[#203426] transition hover:-translate-y-0.5 hover:bg-[#ecd58e] sm:px-7"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             تواصل عبر واتساب
@@ -121,7 +121,7 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <nav className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3" aria-label="روابط التذييل">
+          <nav className="grid grid-cols-1 gap-x-8 gap-y-10 min-[420px]:grid-cols-2 sm:grid-cols-3" aria-label="روابط التذييل">
             {footerGroups.map((group) => (
               <div key={group.title}>
                 <h3 className="text-sm font-bold text-white">{group.title}</h3>

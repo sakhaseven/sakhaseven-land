@@ -112,9 +112,9 @@ export function ProductGalleryDialog({
         role="dialog"
         aria-modal="true"
         aria-labelledby={`gallery-title-${product.id}`}
-        className="flex max-h-[94dvh] w-full max-w-6xl flex-col overflow-hidden rounded-[30px] border border-white/15 bg-[#f8f7f2] shadow-[0_36px_100px_rgba(0,0,0,0.35)]"
+        className="flex max-h-[96dvh] w-full max-w-6xl flex-col overflow-hidden rounded-[22px] border border-white/15 bg-[#f8f7f2] shadow-[0_36px_100px_rgba(0,0,0,0.35)] sm:max-h-[94dvh] sm:rounded-[30px]"
       >
-        <header className="flex items-center justify-between gap-4 border-b border-black/[0.07] bg-white px-5 py-4 sm:px-7">
+        <header className="flex items-center justify-between gap-3 border-b border-black/[0.07] bg-white px-4 py-3 sm:gap-4 sm:px-7 sm:py-4">
           <div>
             <p className="text-[11px] font-bold text-[#a47c24]">
               رحلة العناية بالصنف
@@ -136,12 +136,12 @@ export function ProductGalleryDialog({
           </button>
         </header>
 
-        <div className="overflow-y-auto p-4 sm:p-6">
+        <div className="overflow-y-auto p-3 sm:p-6">
           <div className="grid gap-5 lg:grid-cols-[1.55fr_0.75fr]">
-            <div className="relative aspect-[4/3] min-h-[280px] overflow-hidden rounded-[24px] bg-[#e9e4d8] sm:min-h-[420px]">
+            <div className="relative aspect-[4/3] min-h-[220px] overflow-hidden rounded-[20px] bg-[#e9e4d8] sm:min-h-[420px] sm:rounded-[24px]">
               <GalleryMedia item={activeItem} product={product} />
 
-              <div className="absolute inset-x-4 bottom-4 flex items-center justify-between sm:inset-x-5 sm:bottom-5">
+              <div className="absolute inset-x-2 bottom-2 flex items-center justify-between gap-2 sm:inset-x-5 sm:bottom-5">
                 <span className="rounded-full bg-[#14291d]/85 px-4 py-2 text-xs font-bold text-white backdrop-blur">
                   {activeItem.stage}
                 </span>
@@ -167,7 +167,7 @@ export function ProductGalleryDialog({
                 </p>
               </div>
 
-              <div className="mt-8 flex gap-3 border-t border-black/[0.07] pt-5">
+              <div className="mt-8 flex flex-col gap-3 border-t border-black/[0.07] pt-5 min-[360px]:flex-row">
                 <button
                   type="button"
                   onClick={showPrevious}

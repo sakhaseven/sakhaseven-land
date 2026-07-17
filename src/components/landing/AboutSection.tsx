@@ -5,9 +5,9 @@ import { SectionHeading } from "../ui/SectionHeading";
 
 export function AboutSection() {
   return (
-    <section id="about" className="scroll-mt-24 pb-20 sm:pb-28">
+    <section id="about" className="scroll-mt-24 pb-16 sm:pb-28">
       <Container>
-        <div className="relative overflow-hidden rounded-[36px] bg-[#203f2b] px-6 py-12 text-white sm:px-12 sm:py-16 lg:px-16">
+        <div className="relative overflow-hidden rounded-[28px] bg-[#203f2b] px-5 py-10 text-white sm:rounded-[36px] sm:px-12 sm:py-16 lg:px-16">
           <div className="absolute -left-24 -top-28 size-80 rounded-full border-[65px] border-white/[0.04]" aria-hidden="true" />
           <div className="absolute -bottom-36 right-1/3 size-96 rounded-full border-[75px] border-[#d0b363]/[0.07]" aria-hidden="true" />
 
@@ -27,7 +27,7 @@ export function AboutSection() {
             <div className="shrink-0">
               <a
                 href="#contact"
-                className="group flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#e1c46f] px-8 py-4 text-sm font-bold text-[#203426] transition hover:-translate-y-0.5 hover:bg-[#ecd58e]"
+                className="group flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#e1c46f] px-6 py-4 text-sm font-bold text-[#203426] transition hover:-translate-y-0.5 hover:bg-[#ecd58e] sm:px-8"
               >
                 <Phone className="size-5" aria-hidden="true" />
                 كلمنا واعرف المتاح

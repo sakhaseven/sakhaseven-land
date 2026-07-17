@@ -69,7 +69,7 @@ function PhoneCard({
   return (
     <a
       href={phone.href}
-      className="group relative overflow-hidden rounded-[28px] border border-[#c9a227]/20 bg-[#f8f3e5] p-6 transition hover:-translate-y-1 hover:border-[#c9a227]/45 hover:shadow-[0_24px_55px_rgba(77,61,20,0.1)] sm:p-7"
+      className="group relative overflow-hidden rounded-[24px] border border-[#c9a227]/20 bg-[#f8f3e5] p-5 transition hover:-translate-y-1 hover:border-[#c9a227]/45 hover:shadow-[0_24px_55px_rgba(77,61,20,0.1)] sm:rounded-[28px] sm:p-7"
       aria-label={`اتصل على ${phone.local}`}
     >
       <span
@@ -96,7 +96,7 @@ function PhoneCard({
 
       <div
         dir="ltr"
-        className="relative mt-8 flex flex-wrap items-center gap-2.5 font-mono text-[clamp(1.55rem,4.4vw,2.55rem)] font-bold tracking-tight text-[#183423]"
+        className="relative mt-8 flex flex-wrap items-center gap-2.5 font-mono text-[clamp(1.35rem,7vw,2.55rem)] font-bold tracking-tight text-[#183423]"
         aria-hidden="true"
       >
         {phone.segments.map((segment, segmentIndex) => (
@@ -147,7 +147,7 @@ function ChannelCard({ channel }: { channel: ContactChannel }) {
           </span>
           <span
             dir={channel.href.startsWith("mailto:") ? "ltr" : undefined}
-            className="mt-1 block truncate text-sm font-bold sm:text-base"
+            className="mt-1 block break-all text-sm font-bold sm:text-base"
           >
             {channel.value}
           </span>
@@ -165,7 +165,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 border-y border-black/[0.05] bg-white py-20 sm:py-28"
+      className="scroll-mt-24 border-y border-black/[0.05] bg-white py-16 sm:py-28"
     >
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">

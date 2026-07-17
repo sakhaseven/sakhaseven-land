@@ -15,7 +15,7 @@ function ProductCard({ product, onOpenGallery }: ProductCardProps) {
   const Icon = product.icon;
 
   return (
-    <article className="group relative grid overflow-hidden rounded-[30px] border border-black/[0.06] bg-[#fbfbf8] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#315d3e]/15 hover:shadow-[0_24px_55px_rgba(38,64,44,0.1)] sm:p-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-7">
+    <article className="group relative grid overflow-hidden rounded-[24px] border border-black/[0.06] bg-[#fbfbf8] p-4 transition duration-300 hover:-translate-y-1 hover:border-[#315d3e]/15 hover:shadow-[0_24px_55px_rgba(38,64,44,0.1)] sm:rounded-[30px] sm:p-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-7">
       <div
         className={`relative flex min-h-64 items-center justify-center overflow-hidden rounded-[24px] bg-gradient-to-br ${product.tone}`}
       >
@@ -73,7 +73,7 @@ export function ProductsSection() {
   return (
     <section
       id="products"
-      className="scroll-mt-24 border-y border-black/[0.05] bg-white py-20 sm:py-28"
+      className="scroll-mt-24 border-y border-black/[0.05] bg-white py-16 sm:py-28"
     >
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">

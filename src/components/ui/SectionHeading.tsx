@@ -27,7 +27,7 @@ export function SectionHeading({
       </p>
       <h2
         className={clsx(
-          "mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl",
+          "mt-3 text-[clamp(1.75rem,6.5vw,2.25rem)] font-bold leading-tight tracking-tight sm:text-4xl",
           inverted ? "text-white" : "text-[#1a291e]",
         )}
       >

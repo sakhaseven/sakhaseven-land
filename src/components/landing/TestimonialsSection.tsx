@@ -47,7 +47,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="scroll-mt-24 border-y border-black/[0.05] bg-white py-20 sm:py-28"
+      className="scroll-mt-24 border-y border-black/[0.05] bg-white py-16 sm:py-28"
     >
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">

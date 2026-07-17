@@ -19,7 +19,7 @@ function TrustCard({ point }: { point: TrustPoint }) {
 
 export function QualitySection() {
   return (
-    <section id="quality" className="scroll-mt-24 bg-[#f8f7f2] py-20 sm:py-28">
+    <section id="quality" className="scroll-mt-24 bg-[#f8f7f2] py-16 sm:py-28">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -38,7 +38,7 @@ export function QualitySection() {
             </a>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3">
             {trustPoints.map((point) => (
               <TrustCard key={point.title} point={point} />
             ))}

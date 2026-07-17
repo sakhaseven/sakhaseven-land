@@ -10,7 +10,7 @@ export function SiteHeader() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/[0.06] bg-[#f8f7f2]/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-black/6 bg-[#f8f7f2]/90 backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between">
         <a
           href="#top"
@@ -22,7 +22,7 @@ export function SiteHeader() {
         </a>
 
         <nav
-          className="hidden items-center gap-7 text-sm font-medium text-[#4e594f] lg:flex"
+          className="hidden items-center gap-7 text-sm font-medium text-[#4e594f] xl:flex"
           aria-label="التنقل الرئيسي"
         >
           {navigationItems.map((item) => (
@@ -47,7 +47,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            className="flex size-11 items-center justify-center rounded-full border border-black/10 bg-white text-[#233328] transition hover:border-[#214e34]/25 hover:text-[#214e34] lg:hidden"
+            className="flex size-11 items-center justify-center rounded-full border border-black/10 bg-white text-[#233328] transition hover:border-[#214e34]/25 hover:text-[#214e34] xl:hidden"
             aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
@@ -64,7 +64,7 @@ export function SiteHeader() {
 
       <div
         id="mobile-navigation"
-        className={`border-t border-black/[0.05] bg-[#f8f7f2] lg:hidden ${
+        className={`border-t border-black/5 bg-[#f8f7f2] xl:hidden ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >

@@ -94,7 +94,7 @@ export function HeroSection() {
         <div className="absolute -left-48 top-64 size-[400px] rounded-full bg-[#eee2bd]/60 blur-3xl" />
       </div>
 
-      <Container className="relative grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1.03fr_0.97fr] lg:py-28">
+      <Container className="relative grid items-center gap-12 py-14 sm:gap-14 sm:py-24 lg:grid-cols-[1.03fr_0.97fr] lg:py-28">
         <div className="max-w-2xl">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#214e34]/10 bg-white/75 px-4 py-2 text-xs font-semibold text-[#31593e] shadow-sm backdrop-blur">
             <span className="relative flex size-2" aria-hidden="true">
@@ -106,7 +106,7 @@ export function HeroSection() {
 
           <h1
             id="hero-title"
-            className="text-balance text-4xl font-bold leading-[1.35] tracking-[-0.035em] text-[#17241a] sm:text-5xl lg:text-[64px]"
+            className="text-balance text-[clamp(2.25rem,10vw,3rem)] font-bold leading-[1.35] tracking-[-0.035em] text-[#17241a] sm:text-5xl lg:text-[64px]"
           >
             تقاوي مختارة
             <span className="relative mx-3 inline-block pb-1 text-[#2d6740]">
@@ -149,22 +149,22 @@ export function HeroSection() {
         </div>
 
         <div className="relative mx-auto w-full max-w-[560px]" aria-label="نموذج لبيانات التحقق من عبوة سخا 7">
-          <div className="absolute -inset-7 rounded-[48px] bg-gradient-to-br from-[#dae6d7] via-transparent to-[#e9dcb5] opacity-80 blur-2xl" aria-hidden="true" />
+          <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-[#dae6d7] via-transparent to-[#e9dcb5] opacity-80 blur-2xl sm:-inset-7 sm:rounded-[48px]" aria-hidden="true" />
 
-          <div className="relative overflow-hidden rounded-[38px] border border-white/80 bg-[#ece8d7] p-4 shadow-[0_35px_80px_rgba(42,58,45,0.16)] sm:p-6">
-            <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#244c33] via-[#315f3e] to-[#182e20] p-6 text-white sm:p-8">
+          <div className="relative overflow-hidden rounded-[28px] border border-white/80 bg-[#ece8d7] p-3 shadow-[0_35px_80px_rgba(42,58,45,0.16)] sm:rounded-[38px] sm:p-6">
+            <div className="relative overflow-hidden rounded-[22px] bg-gradient-to-br from-[#244c33] via-[#315f3e] to-[#182e20] p-4 text-white sm:rounded-[28px] sm:p-8">
               <div className="relative z-10 flex items-start justify-between gap-5">
                 <div>
                   <p className="text-xs font-medium text-white/60">منظومة التحقق من العبوة</p>
-                  <p className="mt-1 text-2xl font-bold">من أرضنا لأرضك</p>
+                  <p className="mt-1 text-xl font-bold sm:text-2xl">من أرضنا لأرضك</p>
                 </div>
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-[#e5ca78] backdrop-blur">
                   <Sakha7Logo size={25} title="" variant="golden" />
                 </div>
               </div>
 
-              <div className="relative z-10 mt-8 rounded-[24px] border border-white/70 bg-[#fbf8ed] p-5 text-[#203426] shadow-[0_22px_50px_rgba(7,24,13,0.22)] sm:p-6">
-                <div className="flex items-start justify-between gap-4 border-b border-black/[0.07] pb-5">
+              <div className="relative z-10 mt-6 rounded-[20px] border border-white/70 bg-[#fbf8ed] p-4 text-[#203426] shadow-[0_22px_50px_rgba(7,24,13,0.22)] sm:mt-8 sm:rounded-[24px] sm:p-6">
+                <div className="flex flex-col items-start justify-between gap-4 border-b border-black/[0.07] pb-5 min-[360px]:flex-row">
                   <div className="flex items-center gap-3">
                     <div className="flex size-11 items-center justify-center rounded-xl bg-[#e5f0e5] text-[#2c633e]">
                       <PackageCheck className="size-5" aria-hidden="true" />
