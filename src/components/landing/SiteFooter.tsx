@@ -154,7 +154,7 @@ export function SiteFooter() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <p>© {new Date().getFullYear()} سخا 7. جميع الحقوق محفوظة.</p>
             <a
-              href="/privacy-policy"
+              href={`${import.meta.env.BASE_URL}privacy-policy/`}
               className="rounded-sm text-white/60 transition hover:text-[#e1c46f]"
             >
               سياسة الخصوصية

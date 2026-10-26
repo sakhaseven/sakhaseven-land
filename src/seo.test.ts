@@ -31,12 +31,9 @@ describe("static search and browser metadata", () => {
 
     expect(iconHrefs).toEqual(
       expect.arrayContaining([
-        "/favicon.ico",
-        "/favicon.svg",
-        "/favicon-32x32.png",
-        "/favicon-16x16.png",
-        "/apple-touch-icon.png",
-        "/safari-pinned-tab.svg",
+        "%BASE_URL%favicon.svg?v=20260708",
+        "%BASE_URL%favicon-96x96.png?v=20260708",
+        "%BASE_URL%apple-touch-icon.png?v=20260708",
       ]),
     );
   });
@@ -126,10 +123,9 @@ describe("privacy policy page", () => {
     );
   });
 
-  it("bypasses the landing-page fallback in production", () => {
-    const nginx = readProjectFile("nginx.conf");
-
-    expect(nginx).toContain("location ~ ^/privacy-policy/?$");
-    expect(nginx).toContain("try_files /privacy-policy/index.html =404;");
+  it("builds as a separate static document for GitHub Pages", () => {
+    const viteConfig = readProjectFile("vite.config.ts");
+    expect(viteConfig).toContain('"privacy-policy/index.html"');
+    expect(html).toContain('href="%BASE_URL%"');
   });
 });

@@ -1,15 +1,19 @@
 {
-  "name": "Sakha7",
-  "short_name": "Sakha7",
+  "name": "سخا 7 لتقاوي القمح والأرز",
+  "short_name": "سخا 7",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "start_url": ".",
+  "scope": ".",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png?v=20260717",
+      "src": "web-app-manifest-192x192.png?v=20260717",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png?v=20260717",
+      "src": "web-app-manifest-512x512.png?v=20260717",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
