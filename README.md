@@ -17,7 +17,7 @@ Run `npm run lint`, `npm test`, and `npm run build` before publishing. The outpu
 2. In the repository's **Settings → Pages**, select **GitHub Actions** as the build and deployment source.
 3. The workflow publishes on each push to `main`, or manually via **Actions → Deploy to GitHub Pages → Run workflow**.
 
-By default, assets and links work at `https://<owner>.github.io/<repository>/`. To publish at `www.sakha7.com`, set the custom domain in **Settings → Pages**, configure its DNS for GitHub Pages, and set the repository Actions variable `PAGES_CUSTOM_DOMAIN` to `www.sakha7.com`. The workflow then builds for `/` and writes `CNAME` into the deployment artifact. The site's canonical and social metadata already use `www.sakha7.com`.
+The workflow reads the site's base path from GitHub Pages. With the default project URL, open `https://sakhaseven.github.io/sakhaseven-land/`. If **Settings → Pages** has `www.sakha7.com` as the custom domain, configure its DNS for GitHub Pages and open `https://www.sakha7.com/` instead. The site builds for `/` automatically in that case. Do not append `/sakhaseven-land/` to the custom domain. The site's canonical and social metadata already use `www.sakha7.com`.
 
 To reproduce the repository-path build locally:
 
